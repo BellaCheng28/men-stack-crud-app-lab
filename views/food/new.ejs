@@ -1,0 +1,28 @@
+<!-- views/fruits/new.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a Food</title>
+  </head>
+  <body>
+    <h1>Create a New Food!</h1>
+    <form action="/food" method="post">
+    <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+    </div>
+    <div>
+     <span>Do you like this food?</span>   
+    <input type="radio" name="like"  value="true" id="like" 
+    checked> 
+    <label for="like">Yes</label>
+    <input type="radio" name="like"    value="false" id="dislike"> 
+    <label for="dislike">No</label>
+    </div>
+   <button type="submit">Add Food</button>
+  </body>
+  </form>
+</html>

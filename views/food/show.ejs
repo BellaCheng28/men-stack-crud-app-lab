@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= food.name %></title> 
+    <!-- Dynamic title based on food name -->
+</head>
+<body>
+   <h1><%= food.name %></h1>  
+   <!-- Display food name -->
+    <% if(food.like){%>
+        <p>like the food!</p>
+        <%} else { %>
+            <p>don't like the food!</p>
+            <% } %>
+            <a href="/food/">Back to Food</a>
+
+   <!-- new delete button -->
+<form action="/food/<%=food._id%>?_method=DELETE" method="POST">
+  <button type="submit">Delete <%= food.name %></button>
+</form>
+<a href="/food/<%=food._id %>/edit">edit <%= food.name %></a> 
+<a href="/food">Back to foods</a>  
+      
+</body>
+</html>

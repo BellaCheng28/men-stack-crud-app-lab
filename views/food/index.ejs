@@ -1,0 +1,20 @@
+<!-- views/fruits/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Index</title>
+  </head>
+  <body>
+    <h1>All Food</h1>
+    <ul>
+        <% food.forEach(food =>{%>
+        <li> <a href="/food/<%= food._id%>"><%= food.name %> </a></li>
+       <% }); %> 
+    </ul>
+    <a href="/food/new">Add New Food</a>
+<a href="/food/">Back to Food</a>
+  </body>
+</html>
